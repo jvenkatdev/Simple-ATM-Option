@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Option</title>
+</head>
+<body>
+    <script>
+        var atmOption=4; //1=check balance, 2=deposit, 3=withdrawal, 4=exit.
+        var balance=10000;
+        switch(atmOption){
+            case 1: 
+            document.write("Your Current Balance is: " +balance+ "<br>");
+            break;
+            case 2:
+                var depositAmount=3000;
+                balance+=depositAmount;
+                document.write("Your Deposit is successfully completed. Your current balance is: " +balance+ "<br>");
+                break;
+            case 3:
+                var withdrawalAmount=4000;
+                if(withdrawalAmount>balance){
+                    document.write("Insufficient fund. Your available balance is: "+balance+"<br>");
+
+                } else{
+                    balance-=withdrawalAmount;
+                    document.write("Yout Transaction has been successfully completed. Your current balance is: " +balance+"<br>");
+                    break;
+                }
+            case 4:
+                document.write("Thanks for using our ATM. <br>");
+                break;
+            
+                }
+        
+    </script>
+</body>
+</html>
